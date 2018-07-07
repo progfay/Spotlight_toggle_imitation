@@ -8,8 +8,10 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  // countup: bindActionCreators(actions.countUp, dispatch),
-  // countdown: bindActionCreators(actions.countDown, dispatch)
+  touchStart: bindActionCreators(actions.touchStart, dispatch),
+  swipeUp: bindActionCreators(actions.swipeUp, dispatch),
+  swipeDown: bindActionCreators(actions.swipeDown, dispatch),
+  touchEnd: bindActionCreators(actions.touchEnd, dispatch)
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
