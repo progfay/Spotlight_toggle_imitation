@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  countup: bindActionCreators(actions.countUp, dispatch),
-  countdown: bindActionCreators(actions.countDown, dispatch)
+  // countup: bindActionCreators(actions.countUp, dispatch),
+  // countdown: bindActionCreators(actions.countDown, dispatch)
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
