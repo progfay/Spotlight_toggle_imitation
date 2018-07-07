@@ -1,7 +1,8 @@
 import { createActions } from 'redux-actions'
 
 export default createActions(
-  'ACTIONS_1',
-  'ACTIONS_2',
-  'ACTIONS_3'
+  'TOUCH_START',
+  'SWIPE_UP',
+  'SWIPE_DOWN',
+  'TOUCH_END'
 )
