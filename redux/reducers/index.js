@@ -1,12 +1,14 @@
 import { handleActions } from 'redux-actions'
 
 const initState = {
-  hoge: 0,
-  fuga: 'fuga'
+  visibleSpotlight: false,
+  visibleKeyboard: false,
+  verticalMoveDist: 0
 }
 
 export default handleActions({
-  'ACTIONS_1': (state) => ({ hoge: state.hoge + 1 }),
-  'ACTIONS_2': (state) => ({ fuga: '' })
-  'ACTIONS_3': (state) => ({ fuga: 'fuga' })
+  'TOUCH_START': (state) => ({}),
+  'SWIPE_UP': (state) => ({}),
+  'SWIPE_DOWN': (state) => ({}),
+  'TOUCH_END': (state) => ({})
 }, initState)
