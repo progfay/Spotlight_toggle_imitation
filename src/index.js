@@ -11,8 +11,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   touchStart: bindActionCreators(actions.touchStart, dispatch),
-  swipeUp: bindActionCreators(actions.swipeUp, dispatch),
-  swipeDown: bindActionCreators(actions.swipeDown, dispatch),
+  touchMove: bindActionCreators(actions.touchMove, dispatch),
   touchEnd: bindActionCreators(actions.touchEnd, dispatch)
 })
 

@@ -7,8 +7,7 @@ const initState = {
 }
 
 export default handleActions({
-  'TOUCH_START': (state) => ({}),
-  'SWIPE_UP': (state) => ({}),
-  'SWIPE_DOWN': (state) => ({}),
-  'TOUCH_END': (state) => ({})
+  'TOUCH_START': (state, action) => ({}),
+  'TOUCH_MOVE': (state, action) => ({}),
+  'TOUCH_END': (state, action) => ({})
 }, initState)
