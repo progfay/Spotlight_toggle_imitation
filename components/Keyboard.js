@@ -7,7 +7,7 @@ export default (props) => (
         bottom: 0px;
         width: 100vw;
         height: auto;
-        z-index: 1;
+        z-index: 3;
       }
     `}</style>
   </React.Fragment>

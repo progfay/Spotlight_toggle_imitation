@@ -11,7 +11,7 @@ export default (props) => (
         left: 0;
         width: 100vw;
         height: 5vh;
-        z-index: 0;
+        z-index: 2;
         background-color: rgba(0, 0, 0, 0);
         display: flex;
         justify-content: space-around;
