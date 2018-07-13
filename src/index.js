@@ -6,7 +6,8 @@ import App from '../components/App'
 const mapStateToProps = state => ({
   visibleSpotlight: state.visibleSpotlight,
   visibleKeyboard: state.visibleKeyboard,
-  startPosY: state.startPosY
+  startPosY: state.startPosY,
+  posY: state.posY
 })
 
 const mapDispatchToProps = dispatch => ({
