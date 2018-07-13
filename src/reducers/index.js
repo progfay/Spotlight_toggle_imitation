@@ -3,7 +3,7 @@ import { handleActions } from 'redux-actions'
 const initState = {
   visibleSpotlight: false,
   visibleKeyboard: false,
-  verticalMoveDist: 0
+  startPosY: 0
 }
 
 export default handleActions({

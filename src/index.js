@@ -4,7 +4,9 @@ import actions from './actions'
 import App from '../components/App'
 
 const mapStateToProps = state => ({
-  count: state.count
+  visibleSpotlight: state.visibleSpotlight,
+  visibleKeyboard: state.visibleKeyboard,
+  startPosY: state.startPosY
 })
 
 const mapDispatchToProps = dispatch => ({
