@@ -29,7 +29,7 @@ export default (props) => (
       }
 
       #search {
-        width: 72%;
+        width: 90%;
         height: 90%;
         background-color: rgba(180, 180, 180, 0.5);
         color: rgb(220, 220, 220);
@@ -38,8 +38,9 @@ export default (props) => (
         justify-content: flex-start;
         align-items: center;
         border-radius: 0.6em;
-        padding-left: 2%;
-        margin-left: 2vw;
+        padding-left: 5%;
+        margin-left: 5vw;
+        box-sizing: content-box;
       }
 
       #cancel {
