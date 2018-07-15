@@ -24,7 +24,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${Math.min(props.posY - props.startPosY - props.height * 0.35, props.height * 0.035)}px;
+        top: ${Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035)}px;
       }
 
       #search {
