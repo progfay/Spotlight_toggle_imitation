@@ -8,15 +8,15 @@ export default (props) => (
         width: 100vw;
         height: 67.5vw;
         z-index: 3;
-        transition: bottom 200ms ease-out 0s;
+        transition: top 200ms ease-out 0s;
       }
 
       #keyboard.open {
-        bottom: 0;
+        top: calc(100vh - 67.5vw);
       }
 
       #keyboard.close {
-        bottom: -67.5vw;
+        top: 100vh;
       }
     `}</style>
   </React.Fragment>
