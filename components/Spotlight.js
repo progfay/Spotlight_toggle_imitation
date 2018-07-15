@@ -17,6 +17,7 @@ export default (props) => (
         display: flex;
         justify-content: space-around;
         align-items: center;
+        transition: top 500ms linear 0s;
       }
 
       #spotlight.open {
@@ -24,7 +25,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035)}px;
+        top: ${props.visibleSpotlight ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
       }
 
       #search {
