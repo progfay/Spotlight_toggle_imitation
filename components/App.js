@@ -29,7 +29,7 @@ export default (props) => {
       }
     `}</style>
     <Homescreen {...props} />
-    <Spotlight />
-    <Keyboard />
+    <Spotlight {...props} />
+    <Keyboard {...props} />
   </div>
 )}
