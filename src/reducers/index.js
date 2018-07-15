@@ -13,13 +13,13 @@ export default handleActions({
   'TOUCH_START': (state, action) => ({
     visibleSpotlight: false,
     visibleKeyboard: false,
-    isTOuching: true,
+    isTouching: true,
     startPosY: action.payload.posY,
     posY: action.payload.posY,
     height: state.height == 0 ? action.payload.height : state.height
   }),
   'TOUCH_MOVE': (state, action) => ({
-    isTOuching: true,
+    isTouching: true,
     startPosY: state.startPosY,
     posY: action.payload.posY,
     height: state.height
@@ -27,7 +27,7 @@ export default handleActions({
   'TOUCH_END': (state) => ({
     visibleSpotlight: state.posY - state.startPosY > state.height * 0.35,
     visibleKeyboard: state.posY - state.startPosY > state.height * 0.35,
-    isTOuching: false,
+    isTouching: false,
     startPosY: state.startPosY,
     posY: state.posY,
     height: state.height
