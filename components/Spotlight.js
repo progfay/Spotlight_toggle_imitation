@@ -8,7 +8,7 @@ export default (props) => (
     <style jsx>{`
       #spotlight {
         position: fixed;
-        top: 3.5vh;
+        top: -5vh;
         left: 0;
         width: 100vw;
         height: 5vh;
@@ -17,7 +17,7 @@ export default (props) => (
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transition: top 500ms linear 0s;
+        transition: ${props.visibleSpotlight ? 'top 500ms linear 0s' : 'none'};
       }
 
       #spotlight.open {
@@ -25,7 +25,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${props.visibleSpotlight ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
+        top: ${props.visibleSpotlight || props.height == 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
       }
 
       #search {
