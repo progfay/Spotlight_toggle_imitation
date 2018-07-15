@@ -4,7 +4,7 @@ const BRIGHTNESS_MAX = 65
 const constrain = (value, min, max) => (value < min ? min : (value > max ? max : value))
 
 export default ({ startPosY, posY, height }) => {
-  const percentage = constrain((startPosY - posY) / height, 0, 1)
+  const percentage = constrain((posY - startPosY) / height, 0, 0.35)
   return (
   <React.Fragment>
     <img src="/static/images/homescreen.png" alt="" id="homescreen"/>
