@@ -25,7 +25,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${props.visibleSpotlight || props.height == 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
+        top: ${!props.isTouching || props.height == 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
       }
 
       #search {
