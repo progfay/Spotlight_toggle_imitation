@@ -33,7 +33,7 @@ export default (props) => (
         height: 90%;
         background-color: rgba(180, 180, 180, 0.5);
         color: rgb(220, 220, 220);
-        font-size: 2.2em;
+        font-size: 1.2em;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -44,7 +44,7 @@ export default (props) => (
 
       #cancel {
         color: white;
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: center;
         width: 10rem;
       }
