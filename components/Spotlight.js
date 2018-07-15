@@ -1,6 +1,7 @@
 export default (props) => (
   <React.Fragment>
-    <div id='spotlight'>
+    <div id='spotlight'
+      className={props.visibleSpotlight ? 'open' : 'close'} >
       <div id='search'> Search </div>
       <div id='cancel'> Cancel </div>
     </div>
@@ -16,6 +17,14 @@ export default (props) => (
         display: flex;
         justify-content: space-around;
         align-items: center;
+      }
+
+      #spotlight.open {
+        top: 3.5vh;
+      }
+
+      #spotlight.close {
+        top: ${Math.min(props.posY - props.startPosY - props.height * 0.35, props.height * 0.035)}px;
       }
 
       #search {
