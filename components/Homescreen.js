@@ -34,7 +34,7 @@ export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
         top: 0;
         left: 0;
         width: 100vw;
-        height: auto;
+        height: 3.5211268vh;
         z-index: 3;
       }
     `}</style>
