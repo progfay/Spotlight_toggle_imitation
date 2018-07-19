@@ -3,14 +3,14 @@ import { string } from 'prop-types'
 
 const Head = () => (
   <NextHead>
-    <meta charSet="UTF-8" />
+    <meta charSet='UTF-8' />
     <title>imitate Spotlight</title>
-    <meta name="description" content='' />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
-    <link rel="apple-touch-icon" href="/static/touch-icon.png" />
-    <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
-    <link rel="icon" href="/static/favicon.ico" />
+    <meta name='description' content='' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' sizes='192x192' href='/static/touch-icon.png' />
+    <link rel='apple-touch-icon' href='/static/touch-icon.png' />
+    <link rel='mask-icon' href='/static/favicon-mask.svg' color='#49B882' />
+    <link rel='icon' href='/static/favicon.ico' />
   </NextHead>
 )
 

@@ -1,3 +1,5 @@
+import React from 'react'
+
 const BLUR_MAX = 40
 const BRIGHTNESS_MAX = 65
 
@@ -6,11 +8,11 @@ const constrain = (value, min, max) => (value < min ? min : (value > max ? max :
 export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
   const percentage = constrain((posY - startPosY) / height, 0, 0.35)
   return (
-  <React.Fragment>
-    <img src="/static/images/homescreen.png" alt="" id="homescreen"
-      className={isTouching || visibleSpotlight ? 'filter' : 'none'} />
-    <img src="/static/images/statusbar.png" alt="" id="statusbar"/>
-    <style jsx>{`
+    <React.Fragment>
+      <img src='/static/images/homescreen.png' alt='' id='homescreen'
+        className={isTouching || visibleSpotlight ? 'filter' : 'none'} />
+      <img src='/static/images/statusbar.png' alt='' id='statusbar' />
+      <style jsx>{`
       #homescreen {
         position: fixed;
         top: 0;
@@ -38,5 +40,6 @@ export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
         z-index: 3;
       }
     `}</style>
-  </React.Fragment>
-)}
+    </React.Fragment>
+  )
+}

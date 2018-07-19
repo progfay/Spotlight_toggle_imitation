@@ -16,7 +16,7 @@ export default handleActions({
     isTouching: true,
     startPosY: action.payload.posY,
     posY: action.payload.posY,
-    height: state.height == 0 ? action.payload.height : state.height
+    height: state.height === 0 ? action.payload.height : state.height
   }),
   'TOUCH_MOVE': (state, action) => ({
     isTouching: true,

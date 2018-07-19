@@ -1,6 +1,8 @@
+import React from 'react'
+
 export default (props) => (
   <React.Fragment>
-    <img src="/static/images/keyboard.png" alt="" id="keyboard"
+    <img src='/static/images/keyboard.png' alt='' id='keyboard'
       className={props.visibleKeyboard ? 'open' : 'close'} />
     <style jsx>{`
       #keyboard {
