@@ -1,4 +1,5 @@
 import React from 'react'
+import { KEYBOARD } from '../Constants'
 
 export default (props) => (
   <React.Fragment>
@@ -10,7 +11,10 @@ export default (props) => (
         width: 100vw;
         height: 67.5vw;
         z-index: 3;
-        transition: top 200ms ease-out 0s;
+        transition: top;
+        transition-property: top;
+        transition-duration: ${KEYBOARD.TRANSITION_DURATION}ms;
+        transition-timing-function: ${KEYBOARD.TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.open {

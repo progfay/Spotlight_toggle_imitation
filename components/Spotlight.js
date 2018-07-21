@@ -1,4 +1,5 @@
 import React from 'react'
+import { SPOTLIGHT } from '../Constants'
 
 export default (props) => (
   <React.Fragment>
@@ -19,7 +20,9 @@ export default (props) => (
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transition: ${props.visibleSpotlight ? 'top 500ms linear 0s' : 'none'};
+        transition-property: top;
+        transition-duration: ${SPOTLIGHT.TRANSITION_DURATION}ms;
+        transition-timing-function: ${SPOTLIGHT.TRANSITION_TIMING_FUNCTION};
       }
 
       #spotlight.open {
