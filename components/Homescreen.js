@@ -19,7 +19,7 @@ export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
         height: 100vh;
         z-index: 1;
         transition-property: filter;
-        transition-duration: ${HOMESCREEN.TRANSITION_DURATION};
+        transition-duration: ${HOMESCREEN.TRANSITION_DURATION}ms;
         transition-timing-function: ${HOMESCREEN.TRANSITION_TIMING_FUNCTION};
       }
 
