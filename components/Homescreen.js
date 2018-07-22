@@ -1,10 +1,10 @@
 import React from 'react'
-import { HOMESCREEN } from '../Constants'
+import { COMMON, HOMESCREEN } from '../Constants'
 
 const constrain = (value, min, max) => (value < min ? min : (value > max ? max : value))
 
 export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
-  const percentage = constrain((posY - startPosY) / height, 0, HOMESCREEN.SWIPE_DOWN_PERSENTAGE * 0.01)
+  const percentage = constrain((posY - startPosY) / height, 0, COMMON.SWIPE_DOWN_PERSENTAGE * 0.01)
   return (
     <React.Fragment>
       <img src='/static/images/homescreen.png' alt='' id='homescreen'

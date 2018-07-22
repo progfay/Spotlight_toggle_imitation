@@ -1,3 +1,7 @@
+const COMMON = {
+  SWIPE_DOWN_PERSENTAGE: 35 /* % */,
+}
+
 const HOMESCREEN = {
   BLUR_MAX: 40 /* px */,
   BRIGHTNESS_MAX: 65 /* % */,
@@ -16,4 +20,4 @@ const SPOTLIGHT = {
   TRANSITION_TIMING_FUNCTION: 'ease-out'
 }
 
-export { HOMESCREEN, KEYBOARD, SPOTLIGHT }
+export { COMMON, HOMESCREEN, KEYBOARD, SPOTLIGHT }
