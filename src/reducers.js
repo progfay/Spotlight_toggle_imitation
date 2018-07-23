@@ -1,4 +1,6 @@
 import { handleActions } from 'redux-actions'
+import { COMMON } from '../Constants'
+import { constants } from 'fs';
 
 const initState = {
   filterHomescreen: false,
@@ -29,7 +31,7 @@ export default handleActions({
     height: state.height
   }),
   'TOUCH_END': (state) => {
-    const isOpen = state.posY - state.startPosY > state.height * 0.35
+    const isOpen = state.posY - state.startPosY > state.height * COMMON.SWIPE_DOWN_PERSENTAGE * 0.01
     return {
       filterHomescreen: isOpen,
       visibleSpotlight: isOpen,
