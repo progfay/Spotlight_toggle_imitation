@@ -3,12 +3,12 @@ import { COMMON, HOMESCREEN } from '../Constants'
 
 const constrain = (value, min, max) => (value < min ? min : (value > max ? max : value))
 
-export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
-  const percentage = constrain((posY - startPosY) / height, 0, COMMON.SWIPE_DOWN_PERSENTAGE * 0.01)
+export default ({ filterHomescreen, startPosY, posY, height }) => {
+  const percentage = constrain((posY - startPosY) / (height * COMMON.SWIPE_DOWN_PERSENTAGE * 0.01), 0, 1)
   return (
     <React.Fragment>
       <img src='/static/images/homescreen.png' alt='' id='homescreen'
-        className={isTouching || visibleSpotlight ? 'filter' : 'none'} />
+        className={filterHomescreen ? 'filter' : 'none'} />
       <img src='/static/images/statusbar.png' alt='' id='statusbar' />
       <style jsx>{`
       #homescreen {
@@ -19,16 +19,18 @@ export default ({ isTouching, visibleSpotlight, startPosY, posY, height }) => {
         height: 100vh;
         z-index: 1;
         transition-property: filter;
-        transition-duration: ${isTouching || visibleSpotlight ? 0 : HOMESCREEN.TRANSITION_DURATION}ms;
+        transition-duration: ${!startPosY && !posY ? HOMESCREEN.TRANSITION_DURATION : 0}ms;
         transition-timing-function: ${HOMESCREEN.TRANSITION_TIMING_FUNCTION};
       }
 
       #homescreen.filter {
-        filter: blur(${percentage * HOMESCREEN.BLUR_MAX}px) brightness(${100 - percentage * (100 - HOMESCREEN.BRIGHTNESS_MAX)}%);
+        filter: blur(${HOMESCREEN.BLUR_MAX}px)
+                brightness(${HOMESCREEN.BRIGHTNESS_MAX}%);
       }
 
       #homescreen.none {
-        filter: none;
+        filter: blur(${percentage * HOMESCREEN.BLUR_MAX}px)
+                brightness(${100 - percentage * (100 - HOMESCREEN.BRIGHTNESS_MAX)}%);
       }
 
       #statusbar {

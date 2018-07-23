@@ -30,8 +30,14 @@ export default (props) => (
         }
       `}</style>
     <div id='app'
-      onTouchStart={(e) => { e.persist(); props.touchStart(e.touches[0].clientY, e.target.clientHeight) }}
-      onTouchMove={(e) => { e.persist(); props.touchMove(e.touches[0].clientY) }}
+      onTouchStart={(e) => {
+        e.persist()
+        props.touchStart(e.touches[0].clientY, e.target.clientHeight)
+      }}
+      onTouchMove={(e) => {
+        e.persist()
+        props.touchMove(e.touches[0].clientY)
+      }}
       onTouchEnd={() => { props.touchEnd() }}
     >
       <Homescreen {...props} />

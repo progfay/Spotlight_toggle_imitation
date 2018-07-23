@@ -1,5 +1,5 @@
 import React from 'react'
-import { SPOTLIGHT } from '../Constants'
+import { COMMON, SPOTLIGHT } from '../Constants'
 
 export default (props) => (
   <React.Fragment>
@@ -21,7 +21,7 @@ export default (props) => (
         justify-content: space-around;
         align-items: center;
         transition-property: top;
-        transition-duration: ${props.visibleSpotlight || !props.isTouching ? SPOTLIGHT.TRANSITION_DURATION : 0}ms;
+        transition-duration: ${!props.startPosY && !props.posY ? SPOTLIGHT.TRANSITION_DURATION : 0}ms;
         transition-timing-function: ${SPOTLIGHT.TRANSITION_TIMING_FUNCTION};
       }
 
@@ -30,7 +30,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${!props.isTouching || props.height === 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
+        top: ${Math.min(props.posY - props.startPosY - props.height * (COMMON.SWIPE_DOWN_PERSENTAGE * 0.01 - 0.035), props.height * 0.035)}px;
       }
 
       #search {
