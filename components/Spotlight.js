@@ -30,7 +30,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${Math.min(props.posY - props.startPosY - props.height * (COMMON.SWIPE_DOWN_PERSENTAGE - 0.035), props.height * 0.035)}px;
+        top: ${Math.min(props.posY - props.startPosY - props.height * (COMMON.SWIPE_DOWN_PERSENTAGE * 0.01 - 0.035), props.height * 0.035)}px;
       }
 
       #search {
