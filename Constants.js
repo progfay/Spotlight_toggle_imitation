@@ -10,8 +10,9 @@ const HOMESCREEN = {
 }
 
 const KEYBOARD = {
-  TRANSITION_DURATION: 336 /* ms */,
-  TRANSITION_TIMING_FUNCTION: 'cubic-bezier(0, 0, 0.15, 1.0)'
+  TRANSITION_DURATION: 328 /* ms */,
+  OPEN_TRANSITION_TIMING_FUNCTION: 'cubic-bezier(0, 0, 0.15, 1.0)',
+  CLOSE_TRANSITION_TIMING_FUNCTION: 'cubic-bezier(0, 0, 0.62, 1.0)'
 }
 
 const SPOTLIGHT = {

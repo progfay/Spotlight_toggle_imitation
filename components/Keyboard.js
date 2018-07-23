@@ -14,15 +14,16 @@ export default (props) => (
         transition: top;
         transition-property: top;
         transition-duration: ${KEYBOARD.TRANSITION_DURATION}ms;
-        transition-timing-function: ${KEYBOARD.TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.open {
         top: calc(100vh - 67.5vw);
+        transition-timing-function: ${KEYBOARD.OPEN_TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.close {
         top: 100vh;
+        transition-timing-function: ${KEYBOARD.CLOSE_TRANSITION_TIMING_FUNCTION};
       }
     `}</style>
   </React.Fragment>
