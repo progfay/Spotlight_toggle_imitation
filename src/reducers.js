@@ -12,29 +12,31 @@ const initState = {
 
 export default handleActions({
   'TOUCH_START': (state, action) => ({
-    filterHomescreen: true,
-    visibleSpotlight: true,
-    visibleKeyboard: false,
+    filterHomescreen: state.filterHomescreen,
+    visibleSpotlight: state.visibleSpotlight,
+    visibleKeyboard: state.visibleKeyboard,
     isTouching: true,
     startPosY: action.payload.posY,
     posY: action.payload.posY,
     height: state.height === 0 ? action.payload.height : state.height
   }),
   'TOUCH_MOVE': (state, action) => ({
-    filterHomescreen: true,
-    visibleSpotlight: true,
+    filterHomescreen: false,
+    visibleSpotlight: false,
     isTouching: true,
     startPosY: state.startPosY,
     posY: action.payload.posY,
     height: state.height
   }),
-  'TOUCH_END': (state) => ({
-    filterHomescreen: state.posY - state.startPosY > state.height * 0.35,
-    visibleSpotlight: state.posY - state.startPosY > state.height * 0.35,
-    visibleKeyboard: state.posY - state.startPosY > state.height * 0.35,
-    isTouching: false,
-    startPosY: state.startPosY,
-    posY: state.posY,
-    height: state.height
-  })
+  'TOUCH_END': (state) => {
+    const isOpen = state.posY - state.startPosY > state.height * 0.35
+    return {
+      filterHomescreen: isOpen,
+      visibleSpotlight: isOpen,
+      visibleKeyboard: isOpen,
+      isTouching: false,
+      startPosY: isOpen ? state.startPosY : false,
+      posY: isOpen ? state.posY : false,
+      height: state.height
+  }},
 }, initState)
