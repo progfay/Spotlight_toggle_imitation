@@ -21,16 +21,16 @@ export default (props) => (
         justify-content: space-around;
         align-items: center;
         transition-property: top;
-        transition-duration: ${props.visibleSpotlight ? SPOTLIGHT.TRANSITION_DURATION : 0}ms;
+        transition-duration: ${props.visibleSpotlight ? 0 : SPOTLIGHT.TRANSITION_DURATION}ms;
         transition-timing-function: ${SPOTLIGHT.TRANSITION_TIMING_FUNCTION};
       }
 
       #spotlight.open {
-        top: 3.5vh;
+        top: ${Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035)}px;
       }
 
       #spotlight.close {
-        top: ${props.visibleSpotlight || props.height === 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
+        top: -5vh;
       }
 
       #search {

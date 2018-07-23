@@ -13,7 +13,7 @@ const initState = {
 export default handleActions({
   'TOUCH_START': (state, action) => ({
     filterHomescreen: true,
-    visibleSpotlight: false,
+    visibleSpotlight: true,
     visibleKeyboard: false,
     isTouching: true,
     startPosY: action.payload.posY,
@@ -22,6 +22,7 @@ export default handleActions({
   }),
   'TOUCH_MOVE': (state, action) => ({
     filterHomescreen: true,
+    visibleSpotlight: true,
     isTouching: true,
     startPosY: state.startPosY,
     posY: action.payload.posY,
