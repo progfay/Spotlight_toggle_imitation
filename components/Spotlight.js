@@ -21,7 +21,7 @@ export default (props) => (
         justify-content: space-around;
         align-items: center;
         transition-property: top;
-        transition-duration: ${props.visibleSpotlight || !props.isTouching ? SPOTLIGHT.TRANSITION_DURATION : 0}ms;
+        transition-duration: ${props.visibleSpotlight ? SPOTLIGHT.TRANSITION_DURATION : 0}ms;
         transition-timing-function: ${SPOTLIGHT.TRANSITION_TIMING_FUNCTION};
       }
 
@@ -30,7 +30,7 @@ export default (props) => (
       }
 
       #spotlight.close {
-        top: ${!props.isTouching || props.height === 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
+        top: ${props.visibleSpotlight || props.height === 0 ? '-5vh' : Math.min(props.posY - props.startPosY - props.height * 0.315, props.height * 0.035) + 'px'};
       }
 
       #search {

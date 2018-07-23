@@ -4,7 +4,7 @@ const initState = {
   filterHomescreen: false,
   visibleSpotlight: false,
   visibleKeyboard: false,
-  isTouching: true,
+  isTouching: true, /* @Deprecated */
   startPosY: 0,
   posY: 0,
   height: 0
