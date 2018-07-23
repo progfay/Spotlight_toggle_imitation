@@ -5,9 +5,9 @@ const initState = {
   visibleSpotlight: false,
   visibleKeyboard: false,
   isTouching: true, /* @Deprecated */
-  startPosY: 0,
-  posY: 0,
-  height: 0
+  startPosY: -100,
+  posY: -100,
+  height: 667
 }
 
 export default handleActions({
