@@ -24,7 +24,7 @@ export default ({ filterHomescreen, startPosY, posY, height }) => {
       }
 
       #homescreen.filter {
-        filter: blur(${filterHomescreen ? percentage * HOMESCREEN.BLUR_MAX : 0}px) brightness(${filterHomescreen ? 100 - percentage * (100 - HOMESCREEN.BRIGHTNESS_MAX) : 100}%);
+        filter: blur(${percentage * HOMESCREEN.BLUR_MAX}px) brightness(${100 - percentage * (100 - HOMESCREEN.BRIGHTNESS_MAX)}%);
       }
 
       #homescreen.none {
