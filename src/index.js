@@ -4,6 +4,7 @@ import actions from './actions'
 import App from '../components/App'
 
 const mapStateToProps = state => ({
+  filterHomescreen: state.filterHomescreen,
   visibleSpotlight: state.visibleSpotlight,
   visibleKeyboard: state.visibleKeyboard,
   isTouching: state.isTouching,

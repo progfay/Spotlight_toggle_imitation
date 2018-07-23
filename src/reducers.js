@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions'
 
 const initState = {
+  filterHomescreen: false,
   visibleSpotlight: false,
   visibleKeyboard: false,
   isTouching: true,
@@ -11,6 +12,7 @@ const initState = {
 
 export default handleActions({
   'TOUCH_START': (state, action) => ({
+    filterHomescreen: true,
     visibleSpotlight: false,
     visibleKeyboard: false,
     isTouching: true,
@@ -19,12 +21,14 @@ export default handleActions({
     height: state.height === 0 ? action.payload.height : state.height
   }),
   'TOUCH_MOVE': (state, action) => ({
+    filterHomescreen: true,
     isTouching: true,
     startPosY: state.startPosY,
     posY: action.payload.posY,
     height: state.height
   }),
   'TOUCH_END': (state) => ({
+    filterHomescreen: state.posY - state.startPosY > state.height * 0.35,
     visibleSpotlight: state.posY - state.startPosY > state.height * 0.35,
     visibleKeyboard: state.posY - state.startPosY > state.height * 0.35,
     isTouching: false,
