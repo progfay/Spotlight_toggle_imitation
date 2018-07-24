@@ -26,11 +26,11 @@ export default (props) => (
       }
 
       #spotlight.open {
-        top: 3.5vh;
+        top: 3.5vh !important;
       }
 
       #spotlight.close {
-        top: ${Math.min(props.posY - props.startPosY - props.height * (COMMON.SWIPE_DOWN_PERSENTAGE * 0.01 - 0.035), props.height * 0.035)}px;
+        top: ${Math.min(props.posY - props.startPosY - props.height * (COMMON.SWIPE_DOWN_PERSENTAGE * 0.01 - 0.035), props.height * 0.035)}px !important;
       }
 
       #search {
@@ -42,7 +42,7 @@ export default (props) => (
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        border-radius: 0.6em;
+        border-radius: 0.4em;
         padding-left: 5%;
         margin-left: 5vw;
         box-sizing: content-box;
