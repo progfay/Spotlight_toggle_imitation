@@ -17,12 +17,12 @@ export default (props) => (
       }
 
       #keyboard.open {
-        top: calc(100vh - 67.5vw);
+        top: calc(100vh - 67.5vw) !important;
         transition-timing-function: ${KEYBOARD.OPEN_TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.close {
-        top: 100vh;
+        top: 100vh !important;
         transition-timing-function: ${KEYBOARD.CLOSE_TRANSITION_TIMING_FUNCTION};
       }
     `}</style>
