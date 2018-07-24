@@ -7,7 +7,7 @@ export default (props) => (
       className={props.visibleKeyboard ? 'open' : 'close'} />
     <style jsx>{`
       #keyboard {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 67.5vw;
         z-index: 3;
