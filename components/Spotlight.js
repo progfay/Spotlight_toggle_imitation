@@ -42,7 +42,7 @@ export default (props) => (
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        border-radius: 0.6em;
+        border-radius: 0.4em;
         padding-left: 5%;
         margin-left: 5vw;
         box-sizing: content-box;
