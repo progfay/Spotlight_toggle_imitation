@@ -7,7 +7,6 @@ const mapStateToProps = state => ({
   filterHomescreen: state.filterHomescreen,
   visibleSpotlight: state.visibleSpotlight,
   visibleKeyboard: state.visibleKeyboard,
-  isTouching: state.isTouching,
   startPosY: state.startPosY,
   posY: state.posY,
   height: state.height

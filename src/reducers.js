@@ -5,7 +5,6 @@ const initState = {
   filterHomescreen: false,
   visibleSpotlight: false,
   visibleKeyboard: false,
-  isTouching: true, /* @Deprecated */
   startPosY: -100,
   posY: -100,
   height: 667
@@ -16,7 +15,6 @@ export default handleActions({
     filterHomescreen: state.filterHomescreen,
     visibleSpotlight: state.visibleSpotlight,
     visibleKeyboard: state.visibleKeyboard,
-    isTouching: true,
     startPosY: action.payload.posY,
     posY: action.payload.posY,
     height: state.height === 0 ? action.payload.height : state.height
@@ -24,7 +22,6 @@ export default handleActions({
   'TOUCH_MOVE': (state, action) => ({
     filterHomescreen: false,
     visibleSpotlight: false,
-    isTouching: true,
     startPosY: state.startPosY,
     posY: action.payload.posY,
     height: state.height
@@ -35,7 +32,6 @@ export default handleActions({
       filterHomescreen: isOpen,
       visibleSpotlight: isOpen,
       visibleKeyboard: isOpen,
-      isTouching: false,
       startPosY: isOpen ? state.startPosY : false,
       posY: isOpen ? state.posY : false,
       height: state.height
