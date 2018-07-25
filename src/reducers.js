@@ -20,8 +20,6 @@ export default handleActions({
     height: state.height === 0 ? action.payload.height : state.height
   }),
   'TOUCH_MOVE': (state, action) => ({
-    filterHomescreen: false,
-    visibleSpotlight: false,
     startPosY: state.startPosY,
     posY: action.payload.posY,
     height: state.height

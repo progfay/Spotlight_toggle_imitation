@@ -3,14 +3,7 @@ import { bindActionCreators } from 'redux'
 import actions from './actions'
 import App from '../components/App'
 
-const mapStateToProps = state => ({
-  filterHomescreen: state.filterHomescreen,
-  visibleSpotlight: state.visibleSpotlight,
-  visibleKeyboard: state.visibleKeyboard,
-  startPosY: state.startPosY,
-  posY: state.posY,
-  height: state.height
-})
+const mapStateToProps = state => (state)
 
 const mapDispatchToProps = dispatch => ({
   touchStart: bindActionCreators(actions.touchStart, dispatch),

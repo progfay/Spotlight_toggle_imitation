@@ -11,7 +11,6 @@ export default (props) => (
         width: 100vw;
         height: 67.5vw;
         z-index: 3;
-        transition: top;
         transition-property: top;
       }
 
