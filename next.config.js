@@ -19,7 +19,7 @@ module.exports = withManifest({
   },
   manifest: {
     'name': 'imitate Spotlight',
-    'short_name': 'imitate Spotlight',
+    'short_name': 'Spotlight',
     'description': 'Imitation of iPhone\'s Spotlight toggle interaction',
     'start_url': '/',
     'display': 'standalone',

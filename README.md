@@ -4,6 +4,8 @@ Imitation of iPhone's Spotlight toggle interaction
 
 deploy on [imitateSpotlight.now.sh](https://imitatespotlight.now.sh)🎉
 
+Spotlight with original method: [originalSpotlight.now.sh](originalspotlight.now.sh)🎉
+
 
 ## Install
 
