@@ -1,6 +1,5 @@
 import { handleActions } from 'redux-actions'
 import { COMMON } from '../Constants'
-import { constants } from 'fs';
 
 const initState = {
   filterHomescreen: false,
@@ -40,5 +39,6 @@ export default handleActions({
       startPosY: isOpen ? state.startPosY : false,
       posY: isOpen ? state.posY : false,
       height: state.height
-  }},
+    }
+  }
 }, initState)

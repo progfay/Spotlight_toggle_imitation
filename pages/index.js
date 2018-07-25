@@ -4,7 +4,7 @@ import createStore from '../src/store'
 import App from '../src'
 
 export default class Index extends React.Component {
-  componentDidMount() {
+  componentDidMount () {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/static/workbox/sw.js')
@@ -17,7 +17,7 @@ export default class Index extends React.Component {
     }
   }
 
-  render() {
+  render () {
     return (
       <Provider store={createStore()}>
         <App />

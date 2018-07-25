@@ -1,5 +1,5 @@
 const COMMON = {
-  SWIPE_DOWN_PERSENTAGE: 25 /* % */,
+  SWIPE_DOWN_PERSENTAGE: 25 /* % */
 }
 
 const HOMESCREEN = {
