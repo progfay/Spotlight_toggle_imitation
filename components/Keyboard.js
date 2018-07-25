@@ -13,16 +13,17 @@ export default (props) => (
         z-index: 3;
         transition: top;
         transition-property: top;
-        transition-duration: ${KEYBOARD.TRANSITION_DURATION}ms;
       }
 
       #keyboard.open {
         top: calc(100vh - 67.5vw);
+        transition-duration: ${KEYBOARD.OPEN_TRANSITION_DURATION}ms;
         transition-timing-function: ${KEYBOARD.OPEN_TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.close {
         top: 100vh;
+        transition-duration: ${KEYBOARD.CLOSE_TRANSITION_DURATION}ms;
         transition-timing-function: ${KEYBOARD.CLOSE_TRANSITION_TIMING_FUNCTION};
       }
     `}</style>
