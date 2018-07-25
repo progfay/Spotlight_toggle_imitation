@@ -7,7 +7,7 @@ export default (props) => (
       className={props.visibleKeyboard ? 'open' : 'close'} />
     <style jsx>{`
       #keyboard {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 67.5vw;
         z-index: 3;
@@ -16,13 +16,13 @@ export default (props) => (
       }
 
       #keyboard.open {
-        top: calc(100vh - 67.5vw);
+        top: calc(100vh - 67.5vw) !important;
         transition-duration: ${KEYBOARD.OPEN_TRANSITION_DURATION}ms;
         transition-timing-function: ${KEYBOARD.OPEN_TRANSITION_TIMING_FUNCTION};
       }
 
       #keyboard.close {
-        top: 100vh;
+        top: 100vh !important;
         transition-duration: ${KEYBOARD.CLOSE_TRANSITION_DURATION}ms;
         transition-timing-function: ${KEYBOARD.CLOSE_TRANSITION_TIMING_FUNCTION};
       }
